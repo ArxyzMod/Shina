@@ -16,7 +16,7 @@ global.botname = 'Gura Bot'
 global.listprefix = ['+','!','.']
 global.listv = ['➩','➢','➣','➤','✦','✧']
 global.tempatDB = 'database.json'
-global.pairing_code = false
+global.pairing_code = true
 global.number_bot = ''
 
 global.fake = {
