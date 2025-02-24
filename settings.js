@@ -12,11 +12,11 @@ const chalk = require('chalk');
 global.owner = ['6285700226924']
 global.packname = 'Powered By | © Xyroine'
 global.author = 'Shina MD'
-global.botname = 'Gura Bot'
+global.botname = 'Shina Bot'
 global.listprefix = ['+','!','.']
 global.listv = ['➩','➢','➣','➤','✦','✧']
 global.tempatDB = 'database.json'
-global.pairing_code = true
+global.pairing_code = false
 global.number_bot = ''
 
 global.fake = {
