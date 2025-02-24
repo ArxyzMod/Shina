@@ -1790,7 +1790,7 @@ case '19rujxl1e': {
 			case 'nuliskiri': {
 				if (!isLimit) return m.reply(mess.limit)
 				if (!text) return m.reply(`Kirim perintah *${prefix + command}* Teksnya`)
-				m.reply(mess.wait)
+				await naze.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 				const splitText = text.replace(/(\S+\s*){1,9}/g, '$&\n')
 				const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
 				spawn('convert', [
@@ -1810,7 +1810,7 @@ case '19rujxl1e': {
 				])
 				.on('error', () => m.reply(mess.error))
 				.on('exit', () => {
-					m.reply({ image: fs.readFileSync('./src/nulis/images/buku/setelahkiri.jpg'), caption: 'Jangan Malas Lord. Jadilah siswa yang rajin ರ_ರ' })
+					m.reply({ image: fs.readFileSync('./src/nulis/images/buku/setelahkiri.jpg'), caption: 'Done' })
 					setLimit(m, db)
 				})
 			}
@@ -1818,7 +1818,7 @@ case '19rujxl1e': {
 			case 'nuliskanan': {
 				if (!isLimit) return m.reply(mess.limit)
 				if (!text) return m.reply(`Kirim perintah *${prefix + command}* Teksnya`)
-				m.reply(mess.wait)
+				await naze.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 				const splitText = text.replace(/(\S+\s*){1,9}/g, '$&\n')
 				const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
 				spawn('convert', [
@@ -1838,7 +1838,7 @@ case '19rujxl1e': {
 				])
 				.on('error', () => m.reply(mess.error))
 				.on('exit', () => {
-					m.reply({ image: fs.readFileSync('./src/nulis/images/buku/setelahkanan.jpg'), caption: 'Jangan Malas Lord. Jadilah siswa yang rajin ರ_ರ' })
+					m.reply({ image: fs.readFileSync('./src/nulis/images/buku/setelahkanan.jpg'), caption: 'Done' })
 					setLimit(m, db)
 				})
 			}
@@ -1846,7 +1846,7 @@ case '19rujxl1e': {
 			case 'foliokiri': {
 				if (!isLimit) return m.reply(mess.limit)
 				if (!text) return m.reply(`Kirim perintah *${prefix + command}* Teksnya`)
-				m.reply(mess.wait)
+				await naze.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 				const splitText = text.replace(/(\S+\s*){1,9}/g, '$&\n')
 				const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
 				spawn('convert', [
@@ -1866,7 +1866,7 @@ case '19rujxl1e': {
 				])
 				.on('error', () => m.reply(mess.error))
 				.on('exit', () => {
-					m.reply({ image: fs.readFileSync('./src/nulis/images/folio/setelahkiri.jpg'), caption: 'Jangan Malas Lord. Jadilah siswa yang rajin ರ_ರ' })
+					m.reply({ image: fs.readFileSync('./src/nulis/images/folio/setelahkiri.jpg'), caption: 'Done' })
 					setLimit(m, db)
 				})
 			}
@@ -1874,7 +1874,7 @@ case '19rujxl1e': {
 			case 'foliokanan': {
 				if (!isLimit) return m.reply(mess.limit)
 				if (!text) return m.reply(`Kirim perintah *${prefix + command}* Teksnya`)
-				m.reply(mess.wait)
+				await naze.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 				const splitText = text.replace(/(\S+\s*){1,9}/g, '$&\n')
 				const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
 				spawn('convert', [
@@ -1894,7 +1894,7 @@ case '19rujxl1e': {
 				])
 				.on('error', () => m.reply(mess.error))
 				.on('exit', () => {
-					m.reply({ image: fs.readFileSync('./src/nulis/images/folio/setelahkanan.jpg'), caption: 'Jangan Malas Lord. Jadilah siswa yang rajin ರ_ರ' })
+					m.reply({ image: fs.readFileSync('./src/nulis/images/folio/setelahkanan.jpg'), caption: 'Done' })
 					setLimit(m, db)
 				})
 			}
