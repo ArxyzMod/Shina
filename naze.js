@@ -30,6 +30,7 @@ const similarity = require('similarity');
 const PDFDocument = require('pdfkit');
 const webp = require('node-webpmux');
 const ffmpeg = require('fluent-ffmpeg');
+const ffmpegPath = require('ffmpeg-static');
 const speed = require('performance-now');
 const didYouMean = require('didyoumean');
 const { performance } = require('perf_hooks');
@@ -78,6 +79,7 @@ module.exports = naze = async (naze, m, chatUpdate, store, groupCache) => {
 	try {
 		
 		await LoadDataBase(naze, m);
+		ffmpeg.setFfmpegPath(ffmpegPath);
 		
 		const botNumber = await naze.decodeJid(naze.user.id)
 		const body = (m.type === 'conversation') ? m.message.conversation : (m.type == 'imageMessage') ? m.message.imageMessage.caption : (m.type == 'videoMessage') ? m.message.videoMessage.caption : (m.type == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.type == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.type == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.type == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.type === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : (m.type === 'editedMessage') ? (m.message.editedMessage.message.protocolMessage.editedMessage.extendedTextMessage ? m.message.editedMessage.message.protocolMessage.editedMessage.extendedTextMessage.text : m.message.editedMessage.message.protocolMessage.editedMessage.conversation) : ''
