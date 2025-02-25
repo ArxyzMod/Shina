@@ -2973,7 +2973,6 @@ break
 
 ❏┄┅━┅┄〈 〘 *Search Menu* 〙
 │
-┊▧ ${prefix}ytsearch (query)
 ┊▧ ${prefix}pixiv (query)
 ┊▧ ${prefix}pinterest (query)
 ┊▧ ${prefix}wallpaper (query)
@@ -2989,6 +2988,8 @@ break
 ❏┄┅━┅┄〈 〘 *Download Menu* 〙
 │
 ┊▧ ${prefix}ytmp3 (url)
+┊▧ ${prefix}play (judul)
+┊▧ ${prefix}spotify (judul)
 ┊▧ ${prefix}ytmp4 (url)
 ┊▧ ${prefix}instagram (url)
 ┊▧ ${prefix}tiktok (url)
